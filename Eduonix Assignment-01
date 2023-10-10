@@ -1,0 +1,101 @@
+# Write a Python program that takes two numbers as input and prints the larger number. 
+
+num1= int(input("Enter num1"))
+num2= int(input("Enter num2"))
+
+if(num1>num2):
+    print(num1, "is greater than", num2)
+else:
+    print(num2, "is greater than", num1)
+
+# Create a Python program that asks the user for a month (1-12) and then prints the corresponding season ("Spring," "Summer," "Fall," or "Winter"). 
+
+x=int(input("Enter the month"))
+if(1<=x<=3):
+    print("Spring season")
+elif(4<=x<6):
+    print("Summer season")
+elif(7<=x<=9):
+    print("Fall season")
+else:
+    print("Winter season")
+
+# Write a Python program that determines whether a given year is a leap year or not. Use the leap year rules mentioned earlier. 
+
+x= int(input("Enter the year"))
+if(x%4==0 and x%100!=0) or (x%400==0):
+    print("Leap year")
+else:
+    print("Not a leap year")
+
+# Create a program that takes an integer as input and checks if it's positive, negative, or zero. Print an appropriate message. 
+
+num=float(input("Enter the number"))
+if(num<0):
+    print("Negative number")
+elif(num==0):
+    print("Number is zero")
+else:
+    print("Positive number")
+
+# Write a Python program that asks the user for their age and gender. Based on their age and gender, print a message like "You are a young man" or "You are an old woman."
+
+age=int(input("Enter the age"))
+gender=input("Enter the gender(M/F):").upper()
+
+if(age<18):
+    if(gender=='M'):
+        print("You are a young man")
+    elif(gender=='F'):   
+        print("You are a young woman")
+else:
+    if(gender=='M'):
+        print("You are an old man")
+    elif(gender=='F'):
+        print("You are an old woman")
+
+# Create a program that takes a temperature in Celsius and converts it to Fahrenheit. Display the result with an appropriate message. 
+
+celcius=float(input('Enter the temperature'))
+fahrenheit=(celcius*9/5)+32
+print("Celcius to Fahrenheit conversion is:", fahrenheit)
+
+# Write a Python program that calculates the shipping cost based on the weight of a package. Use the following rules: - Weight <= 2 pounds: $5.00 - 2 pounds < Weight <= 10 pounds: $10.00 - Weight > 10 pounds: $15.00 
+
+weight=float(input('Enter the weight in pounds'))
+if (weight<=2):
+    shipping_cost=5.00
+elif(weight<=10):
+    shipping_cost=10.00
+else:
+        shipping_cost=15.00
+        
+print("The shipping cost is:", shipping_cost)
+
+# Create a program that asks the user for three numbers and then prints them in ascending order. 
+
+n1=int(input("Enter number 1"))
+n2=int(input("Enter number 2"))
+n3=int(input("Enter number 3"))
+sortedlist=sorted([n1,n2,n3], reverse=False)
+print(sortedlist)
+
+# Write a Python program that checks if a given year is a "century year" (ends in 00). If it's a century year, check if it's a leap year. 
+
+year=int(input("Enter the year"))
+if(year%100==0):
+    if(year%400==0):
+        print("Century leap year")
+    else:
+        print("Century, non-leap year")
+else:
+    print("Not a century year")
+
+# Create a program that asks the user for a number and then determines if it's even or odd. Print an appropriate message.
+
+x=int(input("Enter the number"))
+
+if(x%2==0):
+    print("The no is even")
+else:
+    print("The number is odd")
