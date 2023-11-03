@@ -1,0 +1,31 @@
+def checkbalance(n,minbal):
+        if(n==1):
+            print("The balance in your account is", minbal)
+        elif(n==2):
+            withdraw= int(input(("Enter the amount to be withdrawn")))
+            if(withdraw>minbal):
+                print("Not sufficient balance")
+            else:
+                withdraw = minbal-withdraw
+                minbal=withdraw
+                print("The new balance is", minbal)
+        elif(n==3):
+            deposit = int(input("Enter the amont to be deposited"))
+            minbal = minbal + deposit
+            print("The new balance is", minbal)
+        elif(n==4):
+            print("Exiting system")
+        else:
+            print("Please select a correct option")
+        
+        
+
+print("Welcome to ATM")
+print("Press 1 for Check Balance")
+print("Press 2 for Withdrawal")
+print("Press 3 for Deposit")
+print("Press 4 for Exit")
+
+option= int(input("Enter your option"))
+minbal=1000
+checkbalance(option,minbal)
